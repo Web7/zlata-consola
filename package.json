@@ -1,0 +1,44 @@
+{
+	"name": "zlata-consola",
+	"version": "1.0.0",
+	"main": "index.js",
+	"directories": {
+		"doc": "docs"
+	},
+	"scripts": {
+		"build": "webpack --stats-error-details --mode=production",
+		"builddev": "webpack --stats-error-details --mode=development",
+		"start": "webpack-cli serve --mode=development",
+		"fixed": "npm config set legacy-peer-deps true"
+	},
+	"author": "Oleksandr Nikitin",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"@babel/core": "^7.26.0",
+		"@popperjs/core": "^2.11.8",
+		"animate.css": "^4.1.1",
+		"babel-loader": "^9.2.1",
+		"bootstrap": "^5.3.3",
+		"bootstrap-datepicker": "^1.10.0",
+		"bootstrap-icons": "^1.11.3",
+		"css-loader": "^7.1.2",
+		"css-minimizer-webpack-plugin": "^7.0.0",
+		"dotdotdot-js": "^4.1.0",
+		"html-webpack-plugin": "^5.6.3",
+		"jquery": "^3.7.1",
+		"lodash": "^4.17.21",
+		"mini-css-extract-plugin": "^2.9.2",
+		"raw-loader": "^4.0.2",
+		"slick-carousel": "^1.8.1",
+		"twig-html-loader": "^0.1.9",
+		"webpack": "^5.96.1",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^5.1.0",
+		"webpack-md5-hash": "^0.0.6"
+	},
+	"dependencies": {
+		"node-sass": "^9.0.0",
+		"sass-loader": "^13.3.2"
+	}
+}

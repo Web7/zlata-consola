@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    {% block head %}
+    {% include '../organisms/head.twig' %}
+    {% endblock %}
+</head>
+<body class="d-flex flex-column bg-primary">
+    {% block header %}
+    {% include '../organisms/header.twig' %}
+    {% endblock %}
+    {% block main %}
+    {% endblock %}
+    {% block footer %}
+    {% include '../organisms/footer.twig' %}
+    {% endblock %}
+</body>
+</html>
