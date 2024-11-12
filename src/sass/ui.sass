@@ -16,6 +16,9 @@ main
 footer
 	flex: 0 0 auto
 
+p
+	margin-bottom: 40px
+
 .container-fluid
 	padding-left: 20px
 	padding-right: 20px
@@ -39,8 +42,9 @@ footer
 		width: 1890px
 		height: 887px
 		background: url(../images/about-as-bg.svg) no-repeat left top
-		left: -60px
+		left: 0
 		top: 0
+		z-index: -1
 	&-description
 		p
 			margin-bottom: 42px
@@ -49,3 +53,71 @@ footer
 		height: 600px
 		background: no-repeat center center
 		background-size: cover
+
+.for-investors
+	position: relative
+	min-height: 1100px
+	padding-bottom: 240px
+	&:before
+		content: ""
+		display: block
+		width: 100%
+		z-index: -1
+		position: absolute
+		background: url(../images/for-investors-bg.jpg) no-repeat bottom center
+		min-height: 1100px
+		bottom: 0
+	&-left
+		min-height: 945px
+		//padding-right: 16.67%
+		position: relative
+		&:before
+			content: ""
+			display: block
+			width: 960px
+			height: 945px
+			background: url(../images/for-investors-left-bg-static.svg) no-repeat 0 0
+			background-size: cover
+			position: absolute
+			bottom: 533px
+			right: 0
+			z-index: -1
+		&:after
+			content: ""
+			display: block
+			width: 960px
+			height: 812px
+			background: url(../images/for-investors-left-bg-dynamic.svg) no-repeat 0 0
+			background-size: cover
+			position: absolute
+			bottom: 533px
+			right: 0
+			z-index: -1
+	&-right
+		min-height: 1210px
+		//padding-left: 16.67%
+		position: relative
+		&:before
+			content: ""
+			display: block
+			width: 960px
+			height: 1210px
+			background: url(../images/for-investors-right-bg-static.svg) no-repeat 0 0
+			background-size: cover
+			position: absolute
+			bottom: 273px
+			left: 0
+			z-index: -1
+		&:after
+			content: ""
+			display: block
+			width: 960px
+			height: 714px
+			background: url(../images/for-investors-right-bg-dynamic.svg) no-repeat 0 0
+			background-size: contain
+			position: absolute
+			bottom: 273px
+			left: 0
+			z-index: -1
+	h2
+		margin-top: -46px

@@ -32,12 +32,24 @@ b, strong
 		.#{$className}
 			font-size: $size !important
 
-@include headersTag(24, 50, 18, 18)
+@include headersTag(24, 40, 18, 18)
 
 @media (min-width: 576px)
 	@include headersTag(24, 50, 22, 18)
 
+@media (min-width: 768px)
+	@include headersTag(38, 90, 24, 22)
+
+@media (min-width: 992px)
+	@include headersTag(38, 120, 24, 22)
+
 @media (min-width: 1200px)
+	@include headersTag(38, 150, 24, 22)
+
+@media (min-width: 1400px)
+	@include headersTag(38, 160, 24, 22)
+
+@media (min-width: 1600px)
 	@include headersTag(38, 180, 24, 22)
 
 @mixin paragraph($sizes...)
@@ -72,7 +84,7 @@ b, strong
 	@else
 		@content
 
-$fontSizes: (14, 16, 42, 70, 180, 220)
+$fontSizes: (14, 16, 20, 23, 42, 70, 124, 180, 220)
 
 .f
 	@each $breakpoint in map-keys($grid-breakpoints)
