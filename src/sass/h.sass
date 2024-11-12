@@ -5,49 +5,45 @@
 		&#{$infix}
 			@include media-breakpoint-up($next)
 				&-bold
-					font-family: 'montserratbold' !important
-				&-black
-					font-family: 'montserratblack' !important
+					font-family: 'gilroybold' !important
 				&-medium
-					font-family: 'montserratmedium' !important
-				&-mediumitalic
-					font-family: 'montserratmediumitalic' !important
+					font-family: 'gilroymedium' !important
 				&-semibold
-					font-family: 'montserratsemibold' !important
+					font-family: 'gilroysemibold' !important
 				&-regular
-					font-family: 'montserratregular' !important
-				&-extrabold
-					font-family: 'montserratextrabold' !important
-				&-italic
-					font-family: 'montserratregular' !important
-					font-style: italic
+					font-family: 'gilroyregular' !important
 
 .line-height-1
 	line-height: 1
 
+b, strong
+	font-family: 'gilroybold' !important
+
 @mixin headersTag($sizes...)
 	@for $i from 0 to length($sizes)
+		h#{$i + 1},
 		.h#{$i + 1}
-			font-size: #{nth($sizes, $i+1)}
+			font-size: #{nth($sizes, $i+1)}px
 			font-weight: normal
+			font-family: 'gilroybold'
 
 @mixin classSizes($sizes...)
 	@each $className, $size in $sizes
 		.#{$className}
 			font-size: $size !important
 
-@include headersTag(24px, 22px, 18px, 18px)
+@include headersTag(24, 50, 18, 18)
 
-@media (min-width: 540px)
-	@include headersTag(24px, 22px, 22px, 18px)
+@media (min-width: 576px)
+	@include headersTag(24, 50, 22, 18)
 
-@media (min-width: 1140px)
-	@include headersTag(38px, 32px, 24px, 22px)
+@media (min-width: 1200px)
+	@include headersTag(38, 180, 24, 22)
 
 @mixin paragraph($sizes...)
 	@for $i from 0 to length($sizes)
 		.p#{$i + 1}
-			font-size: #{nth($sizes, $i+1)}
+			font-size: #{nth($sizes, $i+1)}px
 			font-weight: normal
 
 @include paragraph(14px)
@@ -76,7 +72,7 @@
 	@else
 		@content
 
-$fontSizes: (14, 16)
+$fontSizes: (14, 16, 42, 70, 180, 220)
 
 .f
 	@each $breakpoint in map-keys($grid-breakpoints)

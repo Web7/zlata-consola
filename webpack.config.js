@@ -35,7 +35,7 @@ module.exports = {
 				resourceQuery: /src\/images/,
 				generator: {
 					filename: 'images/[name][ext]'
-				},
+				}
 			},
 			{
 				test: /\.(mp4)$/,
@@ -75,6 +75,9 @@ module.exports = {
 		port: 8080,
 		hot: true,
 		open: true,
+		static: {
+			directory: path.resolve(__dirname, 'public/'),
+		},
 	},
 
 	plugins: [
