@@ -5,7 +5,7 @@
 - запустить `npm i` это нужно сделать только один раз
 - чтобы запустить сборку нужно выполнить команду `npm run build` готовые файлы будут находиться в папке `dist`
 
-Используеться перенастроенный Bootstrap 5.3.2
+Используеться перенастроенный Bootstrap 5.3.3
 
 Цвета
 
@@ -17,3 +17,4 @@
 - ![#FFC711](https://placehold.co/15x15/FFC711/FFC711.png) `warning` `#FFC711`
 - ![#4ADA36](https://placehold.co/15x15/4ADA36/4ADA36.png) `success` `#4ADA36`
 - ![#4BAFC9](https://placehold.co/15x15/4BAFC9/4BAFC9.png) `info` `#4BAFC9`
+- ![#2C2C2C](https://placehold.co/15x15/2C2C2C/2C2C2C.png) `dark` `#2C2C2C`
