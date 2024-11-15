@@ -2,9 +2,32 @@ const fs = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const PAGES = fs.readdirSync('./src/components/pages/').filter(fileName => fileName.endsWith('.twig'));
 // const data = require('./src/data/data.json');
+
+const configureCopy = () => {
+	return [
+		// {from: "src/video/", to: "video/"},
+		{from: 'src/images/', to: 'images/'},
+		// {from: 'src/fonts/', to: 'fonts/'},
+		{from: 'src/js/', to: 'js/'},
+		// {from: path.resolve('node_modules/jquery/dist/jquery.min.js'), to: path.resolve('docs/js/')},
+		// {from: path.resolve('node_modules/popper.js/dist/popper.min.js'), to: path.resolve('docs/js/')},
+		// {from: path.resolve('node_modules/bootstrap/dist/js/bootstrap.min.js'), to: path.resolve('docs/js/')},
+		// {from: path.resolve('node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js'), to: path.resolve('docs/js/')},
+		// {from: path.resolve('node_modules/bootstrap-datepicker/js/locales/bootstrap-datepicker.uk.js'), to: path.resolve('docs/js/')},
+		// {from: path.resolve('node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js'), to: path.resolve('docs/js/')},
+		// {from: path.resolve('node_modules/dotdotdot-js/dist/dotdotdot.js'), to: path.resolve('docs/js/')},
+		// {from: path.resolve('node_modules/slick-carousel/slick/slick.min.js'), to: path.resolve('docs/js/')},
+		// {from: path.resolve('node_modules/intl-tel-input/build/js/intlTelInput-jquery.min.js'), to: path.resolve('docs/js/')},
+		// {from: path.resolve('src/js/button-scroll-to-top.js'), to: path.resolve('docs/js/')},
+		// {from: path.resolve('src/js/scroll-toggle-menu.js'), to: path.resolve('docs/js/')},
+		// {from: path.resolve('src/js/select-js.js'), to: path.resolve('docs/js/')},
+		// {from: path.resolve('src/js/common.js'), to: path.resolve('docs/js/')},
+	]
+};
 
 module.exports = {
 	mode: 'development',
@@ -52,6 +75,7 @@ module.exports = {
 			},
 			{
 				test: /\.(svg|png|jpg|gif|jpeg)$/,
+				exclude: /src\/images/,
 				resourceQuery: /src\/images/,
 				generator: {
 					filename: 'images/[name][ext]'
@@ -69,6 +93,7 @@ module.exports = {
 			},
 			{
 				test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
+				exclude: /src\/fonts/,
 				resourceQuery: /src\/fonts/,
 				generator: {
 					filename: 'fonts/[name][ext]'
@@ -95,6 +120,9 @@ module.exports = {
 	},
 
 	plugins: [
+		new CopyWebpackPlugin({
+			patterns: configureCopy()
+		}),
 		new MiniCssExtractPlugin({
 			filename: 'css/stylesheet.css',
 			chunkFilename: '[id].css'

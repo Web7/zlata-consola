@@ -13,4 +13,19 @@
 		return this.length !== 0;
 	};
 
+	$(function(){
+		var $ourProjectsSlick = $('.our-projects-slick');
+
+		if ($ourProjectsSlick.exists()) {
+			var $ourProjectsSlickArrows = $ourProjectsSlick.closest('section').find('.our-projects-slick-arrows');
+			$ourProjectsSlick.slick({
+				slidesToShow: 3,
+				variableWidth: true,
+				centerPadding: '40px',
+				useCSS: false,
+				appendArrows: $ourProjectsSlickArrows
+			});
+		}
+	});
+
 }, window.jQuery, window.Zepto));

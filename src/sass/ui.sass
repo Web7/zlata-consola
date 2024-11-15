@@ -148,3 +148,28 @@ p
 			//	display: flex
 			//	justify-content: center
 			//	align-items: center
+
+		&-arrows
+			position: relative
+			height: 70px
+			width: 152px
+			margin-top: 40px
+
+			.slick
+				&-arrow
+					width: 70px
+					height: 70px
+					border-radius: 50px
+					background-color: $white
+					&:before
+						color: $dark
+						font-family: 'remixicon' !important
+				&-prev
+					left: 0
+					&:before
+						content: "\ea60"
+
+				&-next
+					right: 0
+					&:before
+						content: "\ea6c"
