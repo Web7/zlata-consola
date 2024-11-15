@@ -1,0 +1,24 @@
+@use "sass:map"
+
+$btn-focus-colors: ("warning": $dark) !default
+$btn-hover-colors: ("warning": $orange) !default
+$btn-active-colors: ("warning": $gray-800) !default
+$btn-active-font-colors: ("warning": $warning) !default
+
+
+@each $color, $value in $btn-focus-colors
+	.btn-#{$color}:focus
+		border-color: $value !important
+
+@each $color, $value in $btn-hover-colors
+	.btn-#{$color}:hover
+		background-color: $value !important
+		border-color: $value !important
+
+@each $color, $value in $btn-active-colors
+	.btn-#{$color}
+		&:active,
+		&.active
+			background-color: $value !important
+			border-color: $value !important
+			//color: map.get($btn-active-font-colors, "warning")

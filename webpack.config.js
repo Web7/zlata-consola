@@ -24,6 +24,26 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.(twig)$/,
+				exclude: /node_modules/,
+				use: [
+					'raw-loader',
+					{
+						loader: 'twig-html-loader',
+						options: {
+							namespaces: {
+								'images': './src/images'
+							},
+							pretty: true,
+							self: true
+						}
+					}
+
+					// 'extract-loader',
+					// 'html-loader'
+				],
+			},
+			{
 				test: /\.(js)$/,
 				exclude: [/node_modules/, /src\/js/],
 				use: {
@@ -35,7 +55,10 @@ module.exports = {
 				resourceQuery: /src\/images/,
 				generator: {
 					filename: 'images/[name][ext]'
-				}
+				},
+				use: [{
+					loader: 'file-loader?name=[name].[ext]'
+				}]
 			},
 			{
 				test: /\.(mp4)$/,
@@ -59,15 +82,6 @@ module.exports = {
 					'sass-loader'
 				]
 			},
-			{
-				test: /\.(twig)$/,
-				use: [
-					'raw-loader',
-					{
-						loader: 'twig-html-loader',
-					}
-				]
-			}
 		]
 	},
 
@@ -90,7 +104,11 @@ module.exports = {
 				filename: `${page.replace(/\.(twig)$/, '.html')}`,
 				cache: false,
 				lang: 'en',
-				// data
+				data: {
+					images: {
+						projectSlickImage: './src/images/project-slick-image.jpg'
+					}
+				}
 			})
 		)
 	]
