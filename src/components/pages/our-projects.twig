@@ -1,0 +1,17 @@
+{% extends '../templates/layout.twig' %}
+
+{% block main %}
+    <main>
+        <section>
+            <div class="container-fluid">
+                <h2>Наши проекты</h2>
+                <div class="d-flex">
+                    {% include '../molecules/our-projects-slick-item.twig' %}
+                    {% include '../molecules/our-projects-slick-item.twig' %}
+                    {% include '../molecules/our-projects-slick-item.twig' %}
+                    {% include '../molecules/our-projects-slick-item.twig' %}
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
