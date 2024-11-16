@@ -1,0 +1,30 @@
+.our-projects
+	.col
+		padding: 15px
+	h2
+		margin-bottom: -55px
+		position: relative
+		z-index: 3
+	&-item
+		width: calc((100vw / 3) - 66px)
+		height: calc((100vw / 3) - 66px)
+		position: relative
+		display: block
+		color: $white
+		&-image
+			position: absolute
+			width: calc((100vw / 3) - 66px)
+			height: calc((100vw / 3) - 66px)
+			z-index: 1
+			background: no-repeat center center
+			background-size: cover
+		&-title
+			position: absolute
+			z-index: 2
+			bottom: 0
+			left: 0
+			right: 0
+			width: calc((100vw / 3) - 146px)
+			margin: auto 40px 40px 40px
+		span
+			text-decoration: none
