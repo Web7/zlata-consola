@@ -35,6 +35,16 @@ p
 		padding-left: 60px
 		padding-right: 60px
 
+
+.form-floating
+	> .form-control,
+	> .form-control:focus,
+	> .form-control:not(:placeholder-shown),
+	> .form-control-plaintext,
+	> .form-select
+		~ label
+			color: $form-floating-label-color
+
 .logo
 	background: url(../images/logo.svg) no-repeat center center
 	width: 185px
@@ -128,6 +138,10 @@ p
 			z-index: -1
 	h2
 		margin-top: -46px
+	// Page for investors
+	&-section-2
+		background: url(../images/for-investors-section-2-bg.svg) no-repeat top left
+
 
 .our-projects
 	&-title
