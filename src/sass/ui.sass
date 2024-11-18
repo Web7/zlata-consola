@@ -35,6 +35,11 @@ p
 		padding-left: 60px
 		padding-right: 60px
 
+.form-floating
+	> .form-control
+		~ label
+			font-size: 20px
+			line-height: 34px
 
 .form-floating
 	> .form-control,
@@ -44,6 +49,15 @@ p
 	> .form-select
 		~ label
 			color: $form-floating-label-color
+
+.form-floating
+	> .form-control:focus,
+	> .form-control:not(:placeholder-shown),
+	> .form-control-plaintext,
+	> .form-select
+		~ label
+			font-size: 16px
+			line-height: 24px
 
 .logo
 	background: url(../images/logo.svg) no-repeat center center
@@ -141,7 +155,11 @@ p
 	// Page for investors
 	&-section-2
 		background: url(../images/for-investors-section-2-bg.svg) no-repeat top left
-
+	&-section-3
+		textarea
+			height: 190px !important
+		.btn
+			width: 330px
 
 .our-projects
 	&-title
