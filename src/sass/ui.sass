@@ -53,6 +53,14 @@ p
 			color: $form-floating-label-color
 
 .form-floating
+	.form-control:-webkit-autofill,
+	.form-control:-webkit-autofill:hover,
+	.form-control:-webkit-autofill:focus,
+	.form-control:-webkit-autofill:active
+		background-color: #000000 !important
+
+
+.form-floating
 	> .form-control:focus,
 	> .form-control:not(:placeholder-shown),
 	> .form-control-plaintext,
@@ -324,7 +332,6 @@ p
 
 .full-video
 	width: 100%
-	height: 660px
 .play-video
 	width: 100px
 	height: 100px
