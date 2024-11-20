@@ -22,3 +22,42 @@ $btn-active-font-colors: ("warning": $warning) !default
 			background-color: $value !important
 			border-color: $value !important
 			//color: map.get($btn-active-font-colors, "warning")
+
+.btn-circle
+	border-radius: 50%
+	&.dropdown-toggle
+		width: 30px
+		max-width: 30px
+		min-width: 30px
+		height: 30px
+		max-height: 30px
+		min-height: 30px
+		font-size: 12px
+		line-height: 26px
+		padding: 0
+		&:after
+			display: none
+.dropdown-menu
+	min-width: initial !important
+	padding: 10px 20px
+	border-radius: 10px
+	border: none
+	.dropdown-item
+		padding: 0
+		font-size: 20px
+		font-family: 'gilroybold'
+		line-height: 36px
+		&:hover
+			color: $warning
+
+@media (min-width: 960px)
+	.btn-circle
+		&.dropdown-toggle
+			width: 40px
+			max-width: 40px
+			min-width: 40px
+			height: 40px
+			max-height: 40px
+			min-height: 40px
+			font-size: 16px
+			line-height: 36px

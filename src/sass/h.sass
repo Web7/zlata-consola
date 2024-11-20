@@ -76,6 +76,10 @@ b, strong
 	$min: map-get($breakpoints, $name)
 	@return if($min != 0, $min, null)
 
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints)
+	$max: map-get($breakpoints, $name)
+	@return if($max and $max > 0, $max - .02, null)
+
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints)
 	$min: breakpoint-min($name, $breakpoints)
 	@if $min
@@ -83,6 +87,16 @@ b, strong
 			@content
 	@else
 		@content
+
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints)
+	$max: breakpoint-max($name, $breakpoints)
+	@if $max
+		@media (max-width: $max)
+			@content
+
+	@else
+		@content
+
 
 $fontSizes: (0, 14, 16, 20, 23, 24, 26, 34, 37, 42, 46, 51, 56, 66, 70, 77, 124, 150, 180, 198, 220)
 

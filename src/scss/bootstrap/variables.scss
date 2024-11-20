@@ -304,7 +304,7 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+$light:         $white !default;
 $dark:          #2C2C2C !default;
 // scss-docs-end theme-color-variables
 
@@ -425,9 +425,11 @@ $spacers: (
   98: 98px,
   116: 116px,
   160: 160px,
+  210: 210px,
   274: 274px,
   312: 312px,
   328: 328px,
+  441: 441px,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
