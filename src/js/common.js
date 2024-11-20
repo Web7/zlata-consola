@@ -23,7 +23,9 @@
 				variableWidth: true,
 				centerPadding: '40px',
 				useCSS: false,
-				appendArrows: $ourProjectsSlickArrows
+				appendArrows: $ourProjectsSlickArrows,
+				prevArrow: '<button class="slick-prev slick-arrow btn-arrow" aria-label="Previous" type="button" style="">Previous</button>',
+				nextArrow: '<button class="slick-next slick-arrow btn-arrow" aria-label="Next" type="button" style="">Next</button>'
 			});
 		}
 	});
