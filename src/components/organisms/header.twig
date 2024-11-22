@@ -3,7 +3,7 @@
         <div class="container-fluid">
 
             <a href="/" class="logo"></a>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="d-flex justify-content-center d-md-block d-none">
                 <div class="d-flex justify-content-between">
                     <div class="nav-item dropdown">
                         <a href="our-projects.html" class="nav-link">Наши проекты</a>
@@ -25,15 +25,80 @@
                 <a href="#" class="btn btn-light btn-circle dropdown-toggle" data-bs-toggle="dropdown">EN</a>
                 <ul class="dropdown-menu dropdown-menu-lg-end">
                     <li><a class="dropdown-item" href="#">Ru</a></li>
-                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
                     <li><a class="dropdown-item" href="#">En</a></li>
-                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
                     <li><a class="dropdown-item" href="#">Es</a></li>
                 </ul>
             </div>
-            <button class="btn btn-light btn-circle ms-8 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="btn btn-light btn-circle ms-8" type="button" data-bs-toggle="offcanvas" href="#offcanvasExample">
                 <i class="ri-menu-line"></i>
-            </button>
+            </a>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
+                <div class="offcanvas-header">
+                    <a href="#" class="btn btn-dark btn-circle ms-auto" data-bs-dismiss="offcanvas">
+                        <i class="ri-close-line"></i>
+                    </a>
+                </div>
+                <div class="offcanvas-body">
+                    <a href="our-projects.html" class="nav-link">Наши проекты</a>
+                    <a href="#" class="nav-link">
+                        <div class="d-flex">
+                            <div class="nav-image" style="background-image: url(images/)"></div>
+                            <div class="f-bold">
+                                <p class="f-12 lh-13 text-uppercase mb-10">Таунхаусы</p>
+                                <p class="f-16 lh-24 mb-0">Lloret de Mar</p>
+                            </div>
+                            <span class="btn btn-warning btn-lg btn-arrow ms-auto">
+                                <i class="ri-arrow-right-line"></i>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <div class="d-flex">
+                            <div class="nav-image" style="background-image: url(images/)"></div>
+                            <div class="f-bold">
+                                <p class="f-12 lh-13 text-uppercase mb-10">Вилла</p>
+                                <p class="f-16 lh-24 mb-0">Arenys de Mar</p>
+                            </div>
+                            <span class="btn btn-warning btn-lg btn-arrow ms-auto">
+                                <i class="ri-arrow-right-line"></i>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <div class="d-flex">
+                            <div class="nav-image" style="background-image: url(images/)"></div>
+                            <div class="f-bold">
+                                <p class="f-12 lh-13 text-uppercase mb-10">Квартиры</p>
+                                <p class="f-16 lh-24 mb-0">Pineda de Mar</p>
+                            </div>
+                            <span class="btn btn-warning btn-lg btn-arrow ms-auto">
+                                <i class="ri-arrow-right-line"></i>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <div class="d-flex">
+                            <div class="nav-image" style="background-image: url(images/)"></div>
+                            <div class="f-bold">
+                                <p class="f-12 lh-13 text-uppercase mb-10">Вилла</p>
+                                <p class="f-16 lh-24 mb-0">Serra Brava</p>
+                            </div>
+                            <span class="btn btn-warning btn-lg btn-arrow ms-auto">
+                                <i class="ri-arrow-right-line"></i>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="about-us.html" class="nav-link">О нас</a>
+                    <a href="for-investors.html" class="nav-link">Для инвесторов</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
+                </div>
+            </div>
         </div>
     </nav>
 </header>

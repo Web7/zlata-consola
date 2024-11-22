@@ -34,13 +34,19 @@ $btn-active-font-colors: ("warning": $warning) !default
 	font-size: 14px
 	line-height: 26px
 	padding: 0
-	background-color: $white
-	color: $dark
 	box-shadow: none
-	&:hover
-		background-color: $dark
-		color: $white
-		border-color: $dark
+	&.btn-light
+		background-color: $white
+		color: $dark
+		&:hover
+			background-color: $dark
+			color: $white
+			border-color: $dark
+	&.btn-dark
+		&:hover
+			background-color: $white
+			color: $dark
+			border-color: $dark
 	&.dropdown-toggle
 		width: 30px
 		max-width: 30px
