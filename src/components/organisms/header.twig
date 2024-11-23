@@ -3,7 +3,7 @@
         <div class="container-fluid">
 
             <a href="/" class="logo"></a>
-            <div class="d-flex justify-content-center d-md-block d-none">
+            <div class="d-flex justify-content-center d-lg-block d-none mx-lg-auto">
                 <div class="d-flex justify-content-between">
                     <div class="nav-item dropdown">
                         <a href="our-projects.html" class="nav-link">Наши проекты</a>
@@ -21,7 +21,7 @@
                     <a href="contacts.html" class="nav-link">Контакты</a>
                 </div>
             </div>
-            <div class="dropdown-center ms-auto">
+            <div class="dropdown-center ms-lg-0 ms-auto">
                 <a href="#" class="btn btn-light btn-circle dropdown-toggle" data-bs-toggle="dropdown">EN</a>
                 <ul class="dropdown-menu dropdown-menu-lg-end">
                     <li><a class="dropdown-item" href="#">Ru</a></li>
@@ -35,70 +35,23 @@
                     <li><a class="dropdown-item" href="#">Es</a></li>
                 </ul>
             </div>
-            <a class="btn btn-light btn-circle ms-8" type="button" data-bs-toggle="offcanvas" href="#offcanvasExample">
+            <a class="btn btn-light btn-circle ms-8 d-lg-none" type="button" data-bs-toggle="offcanvas" href="#offcanvasExample">
                 <i class="ri-menu-line"></i>
             </a>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
-                <div class="offcanvas-header py-20 pb-0 pt-44">
-                    <a href="#" class="btn btn-dark btn-circle ms-auto" data-bs-dismiss="offcanvas">
-                        <i class="ri-close-line"></i>
-                    </a>
-                </div>
-                <div class="offcanvas-body p-20">
-                    <a href="our-projects.html" class="nav-link px-0 text-decoration-none py-10">Наши проекты</a>
-                    <a href="#" class="nav-link text-decoration-none border-bottom border-bottom-1 border-gray px-0">
-                        <div class="d-flex py-10 align-items-center">
-                            <div class="nav-image" style="background-image: url(images/menu-project-1.jpg)"></div>
-                            <div class="f-bold d-flex flex-column justify-content-center ms-10">
-                                <p class="f-12 lh-13 text-uppercase mb-10">Таунхаусы</p>
-                                <p class="f-16 lh-24 mb-0">Lloret de Mar</p>
-                            </div>
-                            <span class="btn btn-warning btn-lg btn-arrow ms-auto">
-                                <i class="ri-arrow-right-line"></i>
-                            </span>
-                        </div>
-                    </a>
-                    <a href="#" class="nav-link text-decoration-none border-bottom border-bottom-1 border-gray px-0">
-                        <div class="d-flex py-10 align-items-center">
-                            <div class="nav-image" style="background-image: url(images/menu-project-2.jpg)"></div>
-                            <div class="f-bold d-flex flex-column justify-content-center ms-10">
-                                <p class="f-12 lh-13 text-uppercase mb-10">Вилла</p>
-                                <p class="f-16 lh-24 mb-0">Arenys de Mar</p>
-                            </div>
-                            <span class="btn btn-warning btn-lg btn-arrow ms-auto">
-                                <i class="ri-arrow-right-line"></i>
-                            </span>
-                        </div>
-                    </a>
-                    <a href="#" class="nav-link text-decoration-none border-bottom border-bottom-1 border-gray px-0">
-                        <div class="d-flex py-10 align-items-center">
-                            <div class="nav-image" style="background-image: url(images/menu-project-3.jpg)"></div>
-                            <div class="f-bold d-flex flex-column justify-content-center ms-10">
-                                <p class="f-12 lh-13 text-uppercase mb-10">Квартиры</p>
-                                <p class="f-16 lh-24 mb-0">Pineda de Mar</p>
-                            </div>
-                            <span class="btn btn-warning btn-lg btn-arrow ms-auto">
-                                <i class="ri-arrow-right-line"></i>
-                            </span>
-                        </div>
-                    </a>
-                    <a href="#" class="nav-link text-decoration-none border-bottom border-bottom-1 border-gray px-0">
-                        <div class="d-flex py-10 align-items-center">
-                            <div class="nav-image" style="background-image: url(images/menu-project-4.jpg)"></div>
-                            <div class="f-bold d-flex flex-column justify-content-center ms-10">
-                                <p class="f-12 lh-13 text-uppercase mb-10">Вилла</p>
-                                <p class="f-16 lh-24 mb-0">Serra Brava</p>
-                            </div>
-                            <span class="btn btn-warning btn-lg btn-arrow ms-auto">
-                                <i class="ri-arrow-right-line"></i>
-                            </span>
-                        </div>
-                    </a>
-                    <a href="about-us.html" class="nav-link px-0 text-decoration-none border-bottom border-bottom-1 border-gray py-10">О нас</a>
-                    <a href="for-investors.html" class="nav-link px-0 text-decoration-none border-bottom border-bottom-1 border-gray py-10">Для инвесторов</a>
-                    <a href="contacts.html" class="nav-link text-decoration-none px-0 py-10">Контакты</a>
-                </div>
-            </div>
         </div>
     </nav>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
+        <div class="offcanvas-header py-20 pb-0 pt-44">
+            <a href="#" class="btn btn-dark btn-circle ms-auto" data-bs-dismiss="offcanvas">
+                <i class="ri-close-line"></i>
+            </a>
+        </div>
+        <div class="offcanvas-body p-20">
+            <a href="our-projects.html" class="nav-link px-0 text-decoration-none py-10">Наши проекты</a>
+            {% include 'sub-mobile-menu.twig' %}
+            <a href="about-us.html" class="nav-link px-0 text-decoration-none border-bottom border-bottom-1 border-gray py-10">О нас</a>
+            <a href="for-investors.html" class="nav-link px-0 text-decoration-none border-bottom border-bottom-1 border-gray py-10">Для инвесторов</a>
+            <a href="contacts.html" class="nav-link text-decoration-none px-0 py-10">Контакты</a>
+        </div>
+    </div>
 </header>

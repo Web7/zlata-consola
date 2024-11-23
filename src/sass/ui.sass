@@ -1,7 +1,13 @@
-*
-	text-rendering: optimizeLegibility
-	-moz-osx-font-smoothing: grayscale
-	-webkit-font-smoothing: antialiased
+//*
+//	text-rendering: optimizeLegibility
+//	-moz-osx-font-smoothing: grayscale
+//	-webkit-font-smoothing: antialiased
+
+body
+	-webkit-font-smoothing: subpixel-antialiased !important
+	-webkit-backface-visibility: hidden
+	-moz-backface-visibility:    hidden
+	-ms-backface-visibility:     hidden
 
 html
 	height: 100%
@@ -99,16 +105,25 @@ p
 	background-size: cover
 
 .main-image
-	height: 900px
+	height: 568px
 	background: no-repeat center center
 	background-size: cover
 	position: relative
+
+@media (min-width: 1140px)
+	.main-image
+		height: 900px
 
 .title-page
 	font-size: 180px
 	font-family: 'gilroybold'
 	position: absolute
 	bottom: -70px
+
+@media (min-width: 1140px)
+	.title-page
+		font-size: 180px
+
 
 .full-video
 	width: 100%
