@@ -18,3 +18,4 @@
 - ![#4ADA36](https://placehold.co/15x15/4ADA36/4ADA36.png) `success` `#4ADA36`
 - ![#4BAFC9](https://placehold.co/15x15/4BAFC9/4BAFC9.png) `info` `#4BAFC9`
 - ![#2C2C2C](https://placehold.co/15x15/2C2C2C/2C2C2C.png) `dark` `#2C2C2C`
+- ![#DBDBDB](https://placehold.co/15x15/DBDBDB/DBDBDB.png) `gray` `#DBDBDB`
