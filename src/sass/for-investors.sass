@@ -66,6 +66,9 @@
 	h2
 		margin-top: -46px
 	// Page for investors
+	&-section-0
+		.main-image
+			background-position: -200px center
 	&-section-2
 		background: url(../images/for-investors-section-2-bg.svg) no-repeat top left
 	&-section-3
@@ -73,11 +76,28 @@
 			height: 190px !important
 		.btn
 			width: 100%
+		&-image
+			position: relative
+			z-index: 1
+			width: calc(100% + 40px)
+			height: 320px
+			background: url(../images/for-investors-section-3-image.jpg) no-repeat center center
+			background-size: cover
+			top: -80px
+			left: -20px
 
 @media (min-width: 960px)
 	.for-investors
+		&-section-0
+			.main-image
+				background-position: center center
 		&-section-3
 			textarea
 				height: 190px !important
 			.btn
 				width: 330px
+			&-image
+				width: calc(100% + 80px)
+				height: calc(100% + 320px)
+				left: -60px
+				top: -160px
