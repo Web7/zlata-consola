@@ -98,27 +98,49 @@ b, strong
 		@content
 
 
-$fontSizes: (0, 10, 11, 12, 13, 14, 16, 20, 23, 24, 25, 26, 27, 32, 34, 37, 42, 46, 51, 56, 66, 70, 77, 100, 124, 150, 180, 198, 220)
+//$fontSizes: (220, 198, 180, 150, 124, 100, 77, 70, 66, 56, 51, 46, 42, 37, 34, 32, 27, 26, 25, 24, 23, 22, 20, 16, 14, 13, 12, 11, 10, 0)
+//$fontSizes: (0, 10, 11, 12, 13, 14, 16, 20, 22, 23, 24, 25, 26, 27, 32, 34, 37, 42, 46, 51, 56, 66, 70, 77, 100, 124, 150, 180, 198, 220)
+$fontSizes: (0, 10, 11, 12, 13, 14, 16, 20, 22, 23, 24, 25, 26, 27, 32, 34, 37, 42, 46, 51, 56, 66, 70, 77, 100, 124, 150, 180, 198, 220) !default
 
 .f
 	@each $breakpoint in map-keys($grid-breakpoints)
-		$next: breakpoint-next($breakpoint, $grid-breakpoints)
-		$infix: breakpoint-infix($next, $grid-breakpoints)
-		&#{$infix}
-			@include media-breakpoint-up($next)
+		//$next: breakpoint-next($breakpoint, $grid-breakpoints)
+		@include media-breakpoint-up($breakpoint)
+			$infix: breakpoint-infix($breakpoint, $grid-breakpoints)
+			&#{$infix}
 				@each $size in $fontSizes
 					&-#{$size}
 						font-size: #{$size}px !important
 
 .lh
 	@each $breakpoint in map-keys($grid-breakpoints)
-		$next: breakpoint-next($breakpoint, $grid-breakpoints)
-		$infix: breakpoint-infix($next, $grid-breakpoints)
-		&#{$infix}
-			@include media-breakpoint-up($next)
+		//$next: breakpoint-next($breakpoint, $grid-breakpoints)
+		@include media-breakpoint-up($breakpoint)
+			$infix: breakpoint-infix($breakpoint, $grid-breakpoints)
+			&#{$infix}
 				@each $size in $fontSizes
 					&-#{$size}
 						line-height: #{$size}px !important
+
+//.f
+//	@each $breakpoint in map-keys($grid-breakpoints)
+//		$next: breakpoint-next($breakpoint, $grid-breakpoints)
+//		$infix: breakpoint-infix($next, $grid-breakpoints)
+//		&#{$infix}
+//			@include media-breakpoint-up($next)
+//				@each $size in $fontSizes
+//					&-#{$size}
+//						font-size: #{$size}px !important
+
+//.lh
+//	@each $breakpoint in map-keys($grid-breakpoints)
+//		$next: breakpoint-next($breakpoint, $grid-breakpoints)
+//		$infix: breakpoint-infix($next, $grid-breakpoints)
+//		&#{$infix}
+//			@include media-breakpoint-up($next)
+//				@each $size in $fontSizes
+//					&-#{$size}
+//						line-height: #{$size}px !important
 
 .invalid-feedback
 	font-size: 12px
