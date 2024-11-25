@@ -29,36 +29,6 @@
 		span
 			text-decoration: none
 
-@media (min-width: 576px)
-	.our-projects
-		&-item
-			width: calc((100vw / 2) - 66px)
-			height: calc((100vw / 2) - 66px)
-			&-image
-				width: calc((100vw / 2) - 66px)
-				height: calc((100vw / 2) - 66px)
-			&-title
-				width: calc((100vw / 2) - 146px)
-				margin: auto 40px 40px 40px
-
-@media (min-width: 960px)
-	.our-projects
-		h2
-			margin-bottom: -55px
-
-@media (min-width: 1200px)
-	.our-projects
-		&-item
-			width: calc((100vw / 3) - 66px)
-			height: calc((100vw / 3) - 66px)
-			&-image
-				width: calc((100vw / 3) - 66px)
-				height: calc((100vw / 3) - 66px)
-			&-title
-				width: calc((100vw / 3) - 146px)
-
-
-.our-projects
 	&-title
 		margin-bottom: -47px
 		position: relative
@@ -99,17 +69,6 @@
 				margin: auto 40px 40px 40px
 			span
 				text-decoration: none
-		//i
-		//	text-decoration: none
-		//	color: $dark
-		//	background-color: $yellow
-		//	width: 70px
-		//	height: 70px
-		//	min-width: 70px
-		//	min-height: 70px
-		//	display: flex
-		//	justify-content: center
-		//	align-items: center
 
 		&-arrows
 			position: relative
@@ -146,3 +105,51 @@
 					right: 0
 					&:before
 						content: "\ea6c"
+
+@media (min-width: 576px)
+	.our-projects
+		&-item
+			width: calc((100vw / 2) - 66px)
+			height: calc((100vw / 2) - 66px)
+			&-image
+				width: calc((100vw / 2) - 66px)
+				height: calc((100vw / 2) - 66px)
+			&-title
+				width: calc((100vw / 2) - 146px)
+				margin: auto 40px 40px 40px
+		&-title
+			h2
+				margin-bottom: 24px
+		&-slick
+			&-item
+				width: 440px
+				height: 440px
+
+@media (min-width: 960px)
+	.our-projects
+		&-title
+		 	h2
+			 	margin-bottom: 16px
+		> h2
+			margin-bottom: -55px
+		&-slick
+			&-item
+				width: 660px
+				height: 660px
+
+@media (min-width: 1200px)
+	.our-projects
+		&-title
+			h2
+				margin-bottom: 0
+		&-item
+			width: calc((100vw / 3) - 66px)
+			height: calc((100vw / 3) - 66px)
+			&-image
+				width: calc((100vw / 3) - 66px)
+				height: calc((100vw / 3) - 66px)
+			&-title
+				width: calc((100vw / 3) - 146px)
+
+
+.our-projects
