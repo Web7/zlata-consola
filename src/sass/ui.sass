@@ -29,9 +29,13 @@ footer
 	flex: 0 0 auto
 
 p
-	margin-bottom: 40px
+	margin-bottom: 20px
 	&:last-child
 		margin-bottom: 0
+
+@media (min-width: 960px)
+	p
+		margin-bottom: 40px
 
 .nav
 	&-link
@@ -163,6 +167,11 @@ textarea.form-control
 .slick-arrow.btn-arrow
 	position: absolute !important
 
-@media (min-width: 1940px)
+@media (min-width: 1921px)
 	.container-fluid
 		width: 1920px
+
+
+@media (max-width: 579px)
+	.btn
+		width: 100%

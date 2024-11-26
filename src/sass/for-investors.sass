@@ -1,17 +1,47 @@
 .for-investors
-	position: relative
-	min-height: 1100px
-	padding-bottom: 240px
-	&:before
-		content: ""
-		display: block
-		width: 100%
-		z-index: -1
-		position: absolute
-		background: url(../images/for-investors-bg.jpg) no-repeat bottom center
-		min-height: 1100px
-		bottom: 0
-	&-left
+	//position: relative
+	//min-height: 1100px
+	//padding-bottom: 240px
+	//&:before
+	//	content: ""
+	//	display: block
+	//	width: 100%
+	//	z-index: -1
+	//	position: absolute
+	//	background: url(../images/for-investors-bg.jpg) no-repeat bottom center
+	//	min-height: 1100px
+	//	bottom: 0
+	&-bg
+		width: calc(100% + 40px)
+		height: 580px
+		background: no-repeat center center
+		background-size: cover
+		margin-left: -20px
+		position: relative
+		&:before
+			content: ""
+			display: block
+			width: 50vw
+			height: calc(50vw - (50vw * 0.15))
+			background: url(../images/for-investors-left-bg-dynamic.svg) no-repeat right bottom
+			background-size: cover
+			position: absolute
+			top: -14px
+			right: calc(50vw - 10px)
+			z-index: 0
+		&:after
+			content: ""
+			display: block
+			width: 50vw
+			height: calc(50vw - (50vw * 0.25))
+			background: url(../images/for-investors-right-bg-dynamic.svg) no-repeat left bottom
+			background-size: cover
+			position: absolute
+			top: calc(100vw * 0.155)
+			left: calc(50vw - 10px)
+			z-index: 0
+
+	&-left-
 		//min-height: 945px
 		position: relative
 		&:before
@@ -36,7 +66,7 @@
 			bottom: 0
 			left: 0
 			z-index: -1
-	&-right
+	&-right-
 		min-height: 1210px
 		//padding-left: 16.67%
 		position: relative
@@ -85,9 +115,26 @@
 			top: -80px
 			left: -20px
 
+@media (min-width: 1140px)
+	.for-investors
+		&-bg
+			position: relative
+			z-index: -1
+			margin-top: -187px
+			height: calc(100vw * 0.57292)
+			width: calc(100% + 120px)
+			margin-left: -60px
+			&:before
+				right: calc(50vw - 10px)
+				top: calc(-100vw * 0.22083)
+				height: calc(50vw - (50vw * 0.15))
+			&:after
+				top: calc(-100vw * 0.0338542)
+				left: calc(50vw - 10px)
+
 @media (min-width: 960px)
 	.for-investors
-		&-left
+		&-left-
 			min-height: 945px
 			&:before
 				height: 945px
@@ -101,7 +148,7 @@
 				bottom: 533px
 				right: 0
 				left: unset
-		&-right
+		&-right-
 			min-height: 1210px
 			&:before
 				width: 960px
