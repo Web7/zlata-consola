@@ -40,6 +40,31 @@
 			top: calc(100vw * 0.155)
 			left: calc(50vw - 10px)
 			z-index: 0
+		&-sub
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: -1
+			&:before
+				content: ""
+				display: block
+				position: absolute
+				width: 50vw
+				background: url(../images/for-investors-left-bg-static.svg) no-repeat 0 0
+				background-size: cover
+				right: calc(50vw - 10px)
+			&:after
+				content: ""
+				display: block
+				position: absolute
+				width: 50vw
+				background: url(../images/for-investors-right-bg-static.svg) no-repeat 0 0
+				background-size: cover
+				left: calc(50vw - 10px)
 
 	&-left-
 		//min-height: 945px
@@ -131,6 +156,13 @@
 			&:after
 				top: calc(-100vw * 0.0338542)
 				left: calc(50vw - 10px)
+			&-sub
+				&:before
+					top: calc(-100vw * 0.2989)
+					height: calc(50vw * 0.984375)
+				&:after
+					top: calc(-100vw * 0.2889)
+					height: calc(50vw * 1.2604167)
 
 @media (min-width: 960px)
 	.for-investors
