@@ -12,30 +12,29 @@
 		min-height: 1100px
 		bottom: 0
 	&-left
-		min-height: 945px
-		//padding-right: 16.67%
+		//min-height: 945px
 		position: relative
 		&:before
 			content: ""
 			display: block
-			width: 960px
-			height: 945px
+			width: 50vw
+			height: 158px
 			background: url(../images/for-investors-left-bg-static.svg) no-repeat 0 0
 			background-size: cover
 			position: absolute
-			bottom: 533px
-			right: 0
+			bottom: 0
+			left: 0
 			z-index: -1
 		&:after
 			content: ""
 			display: block
-			width: 960px
-			height: 812px
+			width: 50vw
+			height: 135px
 			background: url(../images/for-investors-left-bg-dynamic.svg) no-repeat 0 0
 			background-size: cover
 			position: absolute
-			bottom: 533px
-			right: 0
+			bottom: 0
+			left: 0
 			z-index: -1
 	&-right
 		min-height: 1210px
@@ -44,24 +43,24 @@
 		&:before
 			content: ""
 			display: block
-			width: 960px
-			height: 1210px
+			width: 50vw
+			height: 202px
 			background: url(../images/for-investors-right-bg-static.svg) no-repeat 0 0
 			background-size: cover
 			position: absolute
 			bottom: 273px
-			left: 0
+			right: 0
 			z-index: -1
 		&:after
 			content: ""
 			display: block
-			width: 960px
-			height: 714px
+			width: 50vw
+			height: 286px
 			background: url(../images/for-investors-right-bg-dynamic.svg) no-repeat 0 0
 			background-size: contain
 			position: absolute
 			bottom: 273px
-			left: 0
+			right: 0
 			z-index: -1
 	h2
 		margin-top: -46px
@@ -88,6 +87,35 @@
 
 @media (min-width: 960px)
 	.for-investors
+		&-left
+			min-height: 945px
+			&:before
+				height: 945px
+				width: 960px
+				bottom: 533px
+				right: 0
+				left: unset
+			&:after
+				width: 960px
+				height: 812px
+				bottom: 533px
+				right: 0
+				left: unset
+		&-right
+			min-height: 1210px
+			&:before
+				width: 960px
+				height: 1210px
+				left: 0
+				right: unset
+			&:after
+				width: 960px
+				height: 714px
+				left: 0
+				right: unset
+
+
+
 		&-section-0
 			.main-image
 				background-position: center center
