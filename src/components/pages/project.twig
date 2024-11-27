@@ -1,0 +1,79 @@
+{% extends '../templates/layout.twig' %}
+
+{% block main %}
+<main>
+    <section class="mb-lg-160 mb-80  project-section-0">
+        <div class="main-image" style="background-image: url(images/project-header-bg-2x.jpg)">
+            <div class="container-fluid">
+                <p class="f-20 lh-23">Таунхаусы</p>
+                <h1 class="title-page">Lloret de Mar</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-about-project pt-lg-130 pb-lg-160 py-80">
+        <div class="container-fluid">
+            <h2 class="f-lg-70 lh-lg-77 mb-lg-80">О проекте</h2>
+            <div class="row">
+                <div class="col-lg-5">
+                    <h3>Подробности:</h3>
+                    <p>4 строения по 2 таунхауса каждое в городе Льорет де Мар.</p>
+                </div>
+                <div class="col-lg-5 offset-lg-1"></div>
+                <div class="col-lg-5">
+                    <h3>Описание:</h3>
+                    <ul class="row row-cols-2">
+                        <li>- 8 домов (Каждый по 360 м2)</li>
+                        <li>- Гараж на 2 автомобиля</li>
+                        <li>- Мини-сад с барбекю</li>
+                        <li>- Общий бассейн, зона отдыха</li>
+                        <li>- Терасса</li>
+                        <li>- Зона барбекю</li>
+                        <li>- Гардеробная</li>
+                        <li>- 3 Спальни</li>
+                        <li>- 3 Ванных комнаты</li>
+                        <li>- Гостинная с камином</li>
+                        <li>- Кухня</li>
+                        <li>- Прачечная</li>
+                        <li>- Кладовая</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section-exterior mb-50">
+        <div class="container-fluid">
+            <div class="project-section-title">
+                <h2>Экстерьер</h2>
+            </div>
+            <div class="slick-carousel">
+                {% include '../molecules/our-projects-slick-item.twig' %}
+                {% include '../molecules/our-projects-slick-item.twig' %}
+                {% include '../molecules/our-projects-slick-item.twig' %}
+                {% include '../molecules/our-projects-slick-item.twig' %}
+            </div>
+
+            <div class="slick-arrows mx-15"></div>
+        </div>
+    </section>
+
+    <section class="project-section-interior mb-50">
+        <div class="container-fluid">
+            <div class="project-section-title">
+                <h2>Интерьер</h2>
+            </div>
+            <div class="slick-carousel">
+                {% include '../molecules/our-projects-slick-item.twig' %}
+                {% include '../molecules/our-projects-slick-item.twig' %}
+                {% include '../molecules/our-projects-slick-item.twig' %}
+                {% include '../molecules/our-projects-slick-item.twig' %}
+            </div>
+
+            <div class="slick-arrows mx-15"></div>
+        </div>
+    </section>
+
+    {% include '../organisms/video-section.twig' %}
+</main>
+{% endblock %}
