@@ -175,3 +175,22 @@ textarea.form-control
 @media (max-width: 579px)
 	.btn
 		width: 100%
+
+.form-floating > .form-control ~ label,
+.form-control
+	font-size: 18px
+	line-height: 18px
+
+.form-floating > .form-control, .form-floating > .form-control-plaintext, .form-floating > .form-select
+	height: 64px
+	min-height: 64px
+
+@media (min-width: 960px)
+	.form-floating > .form-control ~ label,
+	.form-control
+		font-size: 20px
+		line-height: 30px
+
+	.form-floating > .form-control, .form-floating > .form-control-plaintext, .form-floating > .form-select
+		height: 74px
+		min-height: 74px
