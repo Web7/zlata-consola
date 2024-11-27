@@ -6,6 +6,7 @@
 		background-size: cover
 		margin-left: -20px
 		position: relative
+		z-index: -1
 		&:before
 			content: ""
 			display: block
@@ -45,6 +46,8 @@
 				background: url(../images/for-investors-left-bg-static.svg) no-repeat 0 0
 				background-size: cover
 				right: calc(50vw - 10px)
+				height: calc(50vw * 0.9875)
+				top: calc(-50vw * 0.22)
 			&:after
 				content: ""
 				display: block
@@ -53,6 +56,8 @@
 				background: url(../images/for-investors-right-bg-static.svg) no-repeat 0 0
 				background-size: cover
 				left: calc(50vw - 10px)
+				height: calc(50vw * 1.2625)
+				top: calc(-50vw * 0.22)
 	&-section-0
 		.main-image
 			background-position: -200px center
@@ -73,11 +78,43 @@
 			top: -80px
 			left: -20px
 
+@media (min-width: 960px)
+	.for-investors
+		&-bg
+			margin-top: -80px
+			height: calc(100vw * 0.57292)
+			width: calc(100% + 40px)
+			&:before
+				right: calc(50vw - 10px)
+				top: calc(-100vw * 0.22083)
+				height: calc(50vw - (50vw * 0.15))
+			&:after
+				top: calc(-100vw * 0.0338542)
+				left: calc(50vw - 10px)
+			&-sub
+				&:before
+					top: calc(-100vw * 0.2989)
+					height: calc(50vw * 0.984375)
+				&:after
+					top: calc(-100vw * 0.2889)
+					height: calc(50vw * 1.2604167)
+		&-section-0
+			.main-image
+			background-position: center center
+		&-section-3
+			textarea
+				height: 190px !important
+			.btn
+				width: 330px
+			&-image
+				width: calc(100% + 80px)
+				height: calc(100% + 320px)
+				left: -60px
+				top: -160px
+
 @media (min-width: 1140px)
 	.for-investors
 		&-bg
-			position: relative
-			z-index: -1
 			margin-top: -187px
 			height: calc(100vw * 0.57292)
 			width: calc(100% + 120px)
@@ -96,20 +133,3 @@
 				&:after
 					top: calc(-100vw * 0.2889)
 					height: calc(50vw * 1.2604167)
-
-@media (min-width: 960px)
-	.for-investors
-
-		&-section-0
-			.main-image
-				background-position: center center
-		&-section-3
-			textarea
-				height: 190px !important
-			.btn
-				width: 330px
-			&-image
-				width: calc(100% + 80px)
-				height: calc(100% + 320px)
-				left: -60px
-				top: -160px
