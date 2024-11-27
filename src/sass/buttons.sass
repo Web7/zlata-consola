@@ -25,6 +25,17 @@ $btn-active-font-colors: ("warning": $warning) !default
 
 .btn
 	color: #4d4d4d
+	&.btn-outline-white
+		color: $white
+		font-size: 16px
+		&:hover,
+		&:active,
+		&.active
+			background-color: #4BA0BF
+			border-color: #4BA0BF
+			color: $white
+	i
+		margin-left: 40px
 
 .btn-circle
 	border-radius: 50%

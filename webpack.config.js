@@ -11,7 +11,7 @@ const configureCopy = () => {
 	return [
 		// {from: "src/video/", to: "video/"},
 		{from: 'src/images/', to: 'images/'},
-		// {from: 'src/fonts/', to: 'fonts/'},
+		{from: 'src/fonts/', to: 'fonts/'},
 		{from: 'src/js/', to: 'js/'},
 		// {from: path.resolve('node_modules/jquery/dist/jquery.min.js'), to: path.resolve('docs/js/')},
 		// {from: path.resolve('node_modules/popper.js/dist/popper.min.js'), to: path.resolve('docs/js/')},
@@ -81,7 +81,7 @@ module.exports = {
 					filename: 'images/[name][ext]'
 				},
 				use: [{
-					loader: 'file-loader?name=[name].[ext]'
+					loader: 'file-loader'
 				}]
 			},
 			{
@@ -93,14 +93,17 @@ module.exports = {
 			},
 			{
 				test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
-				exclude: /src\/fonts/,
-				resourceQuery: /src\/fonts/,
+				exclude: [/src\/fonts/, /node_modules/],
+				resourceQuery: [/src\/fonts/, /node_modules/],
 				generator: {
 					filename: 'fonts/[name][ext]'
-				}
+				},
+				use: [{
+					loader: 'file-loader'
+				}]
 			},
 			{
-				test: /\.(sass|scss)$/,
+				test: /\.(sass|scss|css)$/,
 				use: [
 					MiniCssExtractPlugin.loader,
 					'css-loader',
