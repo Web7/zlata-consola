@@ -423,6 +423,7 @@ $spacers: (
   42: 42px,
   44: 44px,
   53: 53px,
+  50: 50px,
   56: 56px,
   62: 62px,
   65: 65px,
@@ -514,6 +515,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1400px,
+  xlg: 1600px,
   xxxl: 1800px
 ) !default;
 // scss-docs-end grid-breakpoints
@@ -533,7 +535,8 @@ $container-max-widths: (
   lg: 960px,
   xl: 1140px,
   xxl: 1320px,
-  xxxl: 1520px
+  xlg: 1520px,
+  xxxl: 1720px
 ) !default;
 // scss-docs-end container-max-widths
 
@@ -1392,13 +1395,13 @@ $card-group-margin:                 $grid-gutter-width * .5 !default;
 // Accordion
 
 // scss-docs-start accordion-variables
-$accordion-padding-y:                     1rem !default;
-$accordion-padding-x:                     1.25rem !default;
+$accordion-padding-y:                     10px !default;
+$accordion-padding-x:                     30px !default;
 $accordion-color:                         var(--#{$prefix}body-color) !default;
-$accordion-bg:                            var(--#{$prefix}body-bg) !default;
+$accordion-bg:                            rgba(255, 255, 255, 0.5) !default;
 $accordion-border-width:                  var(--#{$prefix}border-width) !default;
 $accordion-border-color:                  var(--#{$prefix}border-color) !default;
-$accordion-border-radius:                 var(--#{$prefix}border-radius) !default;
+$accordion-border-radius:                 0 !default;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width) !default;
 
 $accordion-body-padding-y:                $accordion-padding-y !default;
