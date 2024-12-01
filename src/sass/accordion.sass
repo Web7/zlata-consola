@@ -3,9 +3,20 @@
 		font-size: 22px
 		padding: 21px 28px
 		line-height: 22px
+		max-height: 60px
 	&-header
 		padding: 30px
 		&-col
+			margin-right: 30px
+			flex: 0 0 auto
+			&:nth-child(1)
+				min-width: 20%
+				max-width: 33.33%
+			&:nth-child(2),
+			&:nth-child(3)
+				max-width: 16.67%
+			&:nth-child(4)
+				max-width: 33.33%
 			> *
 				display: block
 			strong
@@ -21,3 +32,54 @@
 				line-height: 40px
 	&-item
 		padding-right: 25px
+
+.house-layout
+	&-slick
+		overflow: hidden
+		height: 280px
+		&-item
+			width: 280px !important
+			height: 280px
+			background: no-repeat center center
+			margin: 0 7px
+
+.slick-arrows-container
+	position: relative
+	.slick-arrow.btn-arrow
+		width: 60px
+		height: 60px
+		position: static !important
+		display: inline-block
+		border-radius: 50px
+		background-color: #ffffff
+		border: 2px solid #ffffff
+		margin-top: 40px
+		margin-left: 12px
+		&:before
+			color: #2C2C2C
+			font-family: 'remixicon' !important
+		&.slick-prev:before
+			content: "\ea60"
+		&.slick-next:before
+			content: "\ea6c"
+
+@media (min-width: 567px)
+	.accordion
+		.btn
+			font-size: 22px
+			padding: 21px 28px
+			line-height: 22px
+			max-height: 70px
+
+	.slick-arrows-container
+		.slick-arrow.btn-arrow
+			width: 70px
+			height: 70px
+
+	.house-layout
+		&-slick
+			height: 188px
+			&-item
+				width: 178px !important
+				height: 188px
+				margin: 0 7px

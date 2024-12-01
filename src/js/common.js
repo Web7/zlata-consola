@@ -15,6 +15,8 @@
 
 	$(function(){
 		var $ourProjectsSlick = $('.our-projects-slick');
+		var $slickCarousel = $('.slick-carousel');
+		var $houseLayoutSlick = $('.house-layout-slick');
 
 		if ($ourProjectsSlick.exists()) {
 			var $ourProjectsSlickArrows = $ourProjectsSlick.closest('section').find('.our-projects-slick-arrows');
@@ -24,8 +26,42 @@
 				centerPadding: '40px',
 				useCSS: false,
 				appendArrows: $ourProjectsSlickArrows,
-				prevArrow: '<button class="slick-prev slick-arrow btn-arrow" aria-label="Previous" type="button" style="">Previous</button>',
-				nextArrow: '<button class="slick-next slick-arrow btn-arrow" aria-label="Next" type="button" style="">Next</button>'
+				prevArrow: '<button class="slick-prev slick-arrow btn-arrow" type="button">Previous</button>',
+				nextArrow: '<button class="slick-next slick-arrow btn-arrow" type="button">Next</button>'
+			});
+		}
+
+		if ($slickCarousel.exists()) {
+			$slickCarousel.each(function() {
+				var $this = $(this);
+				var $slickArrowsContainer = $this.closest('section').find('.slick-arrows-container');
+				$this.slick({
+					slidesToShow: 3,
+					variableWidth: true,
+					centerPadding: '40px',
+					useCSS: false,
+					appendArrows: $slickArrowsContainer,
+					prevArrow: '<button class="slick-prev slick-arrow btn-arrow" type="button">Previous</button>',
+					nextArrow: '<button class="slick-next slick-arrow btn-arrow" type="button">Next</button>'
+				});
+			});
+
+		}
+
+		if ($houseLayoutSlick.exists()) {
+			$houseLayoutSlick.each(function() {
+				var $this = $(this);
+				var $accordionBody = $this.closest('.accordion-body');
+				var $slickArrowsContainer = $accordionBody.find('.slick-arrows-container');
+				$this.slick({
+					slidesToShow: 9,
+					variableWidth: true,
+					centerPadding: '14px',
+					useCSS: false,
+					appendArrows: $slickArrowsContainer,
+					prevArrow: '<button class="slick-prev slick-arrow btn-arrow" type="button">Previous</button>',
+					nextArrow: '<button class="slick-next slick-arrow btn-arrow" type="button">Next</button>'
+				})
 			});
 		}
 	});
