@@ -42,7 +42,14 @@
 					useCSS: false,
 					appendArrows: $slickArrowsContainer,
 					prevArrow: '<button class="slick-prev slick-arrow btn-arrow" type="button">Previous</button>',
-					nextArrow: '<button class="slick-next slick-arrow btn-arrow" type="button">Next</button>'
+					nextArrow: '<button class="slick-next slick-arrow btn-arrow" type="button">Next</button>',
+					responsive: [
+						{
+							breakpoint: 567,
+							slidesToShow: 1,
+							centerPadding: '20px'
+						}
+					]
 				});
 			});
 

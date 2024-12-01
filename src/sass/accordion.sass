@@ -41,13 +41,29 @@
 			width: 280px !important
 			height: 280px
 			background: no-repeat center center
+			background-size: cover
 			margin: 0 7px
+
+.slick-carousel
+	margin-left: -10px
+	height: calc(100vw - 40px)
+	overflow: hidden
+	.slick-item-image
+		width: calc(100vw - 40px)
+		min-width: calc(100vw - 40px)
+		height: calc(100vw - 40px)
+		background: no-repeat center center
+		background-size: cover
+		margin: 0 10px
 
 .slick-arrows-container
 	position: relative
+	text-align: center
 	.slick-arrow.btn-arrow
 		width: 60px
 		height: 60px
+		max-width: 60px
+		min-width: 60px
 		position: static !important
 		display: inline-block
 		border-radius: 50px
@@ -55,6 +71,8 @@
 		border: 2px solid #ffffff
 		margin-top: 40px
 		margin-left: 12px
+		&:first-child
+			margin-left: 0
 		&:before
 			color: #2C2C2C
 			font-family: 'remixicon' !important
@@ -70,11 +88,14 @@
 			padding: 21px 28px
 			line-height: 22px
 			max-height: 70px
+			min-width: 70px
 
 	.slick-arrows-container
+		text-align: left
 		.slick-arrow.btn-arrow
 			width: 70px
 			height: 70px
+			max-width: 70px
 
 	.house-layout
 		&-slick
@@ -83,3 +104,19 @@
 				width: 178px !important
 				height: 188px
 				margin: 0 7px
+
+	.slick-carousel
+		margin-left: 0
+		height: calc(50vw - 40px)
+		.slick-item-image
+			width: calc(50vw - 40px)
+			min-width: calc(50vw - 40px)
+			height: calc(50vw - 40px)
+
+@media (min-width: 567px)
+	.slick-carousel
+		height: calc((100vw / 3) - 40px)
+		.slick-item-image
+			width: calc((100vw / 3) - 40px)
+			min-width: calc((100vw / 3) - 40px)
+			height: calc((100vw / 3) - 40px)
