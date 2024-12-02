@@ -33,17 +33,19 @@
 		height: 804px
 
 @media (min-width: 960px)
+	.d-lg-flex
+		display: flex !important
 	.main-header-section
 		height: 730px
 		&-menu
 			margin-top: 0
-			> div:nth-last-child()
+			> div:last-child
 				.main-header-section-menu-item
 					margin-right: 0
 			&-item
 				position: relative
-				width: 280px
-				height: 280px
+				width: calc((100vw / 3) - 40px)
+				height: calc((100vw / 3) - 40px)
 				padding: 20px
 				margin-right: 20px
 				margin-bottom: 0

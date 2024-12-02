@@ -81,7 +81,15 @@
 		&.slick-next:before
 			content: "\ea6c"
 
-@media (min-width: 567px)
+.slick-carousel-section
+	.project-section-title
+		position: relative
+		z-index: 2
+		margin-bottom: 40px
+	.slick-arrows-container
+		margin-top: 20px
+
+@media (min-width: 540px)
 	.accordion
 		.btn
 			font-size: 22px
@@ -113,10 +121,16 @@
 			min-width: calc(50vw - 40px)
 			height: calc(50vw - 40px)
 
-@media (min-width: 567px)
+@media (min-width: 720px)
 	.slick-carousel
 		height: calc((100vw / 3) - 40px)
 		.slick-item-image
 			width: calc((100vw / 3) - 40px)
 			min-width: calc((100vw / 3) - 40px)
 			height: calc((100vw / 3) - 40px)
+
+	.slick-carousel-section
+		.project-section-title
+			margin-bottom: -7px
+		.slick-arrows-container
+			margin-top: 40px

@@ -45,10 +45,14 @@
 					nextArrow: '<button class="slick-next slick-arrow btn-arrow" type="button">Next</button>',
 					responsive: [
 						{
-							breakpoint: 567,
+							breakpoint: 540,
 							slidesToShow: 1,
 							centerPadding: '20px'
-						}
+						},{
+							breakpoint: 720,
+							slidesToShow: 2,
+							centerPadding: '20px'
+						},
 					]
 				});
 			});

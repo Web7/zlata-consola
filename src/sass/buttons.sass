@@ -34,7 +34,7 @@ $btn-active-font-colors: ("warning": $warning) !default
 			background-color: #4BA0BF
 			border-color: #4BA0BF
 			color: $white
-	&:not(.btn-slick-arrow):not(.btn-arrow) i
+	&:not(.btn-slick-arrow):not(.btn-arrow):not(.btn-circle) i
 		margin-left: 40px
 
 .btn-circle
@@ -98,16 +98,6 @@ $btn-active-font-colors: ("warning": $warning) !default
 		line-height: 12px
 
 @media (min-width: 960px)
-	.btn-lg
-		width: 70px
-		min-width: 70px
-		height: 70px
-		padding: 23px
-		i
-			font-size: 28px
-			width: 25px
-			height: 25px
-			line-height: 25px
 	.btn-circle
 		&.dropdown-toggle
 			width: 40px
@@ -118,3 +108,15 @@ $btn-active-font-colors: ("warning": $warning) !default
 			min-height: 40px
 			font-size: 16px
 			line-height: 36px
+
+@media (min-width: 1200px)
+	.btn-lg
+		width: 70px
+		min-width: 70px
+		height: 70px
+		padding: 23px
+		i
+			font-size: 28px
+			width: 25px
+			height: 25px
+			line-height: 25px
